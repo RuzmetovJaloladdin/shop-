@@ -1,7 +1,7 @@
 *{
     margin: 0;
     ul, li{
-        position: relative;
+        /* position: relative; */
         list-style: none;
     }
     a{
@@ -15,7 +15,7 @@ body{
     font-family: system-ui;
 }
 .container{
-    width: 1000px;
+    width: 100%;
     margin: auto;
     transition: 0.5s;
     display: flex;
@@ -31,6 +31,8 @@ header{
     display: grid;
     grid-template-columns: 1fr 50px;
     margin-top: 50px;
+    display: flex;
+    justify-content: center;
 }
 header .shopping{
     position: relative;
@@ -50,6 +52,9 @@ header .shopping span{
     top: -5px;
     left: 80%;
     padding: 3px 10px;
+}
+.logo{
+    margin-left: 200px;
 }
 .shopping{
     cursor: pointer;
@@ -90,7 +95,7 @@ header .shopping span{
     position: fixed;
     top:0;
     left: 100%;
-    width: 500px;
+    width: 50%;
     background-color: #453E3B;
     height: 100vh;
     transition: 0.5s;
@@ -179,14 +184,14 @@ header .shopping span{
 }
 .navbar{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .navbar-item{
-    margin: 20px 45px ;
+    margin-right: 25px;
+    margin-top: 15px;
+    margin-left: 10px;
 }
-.navbar-item:first-child{
-    margin-left: 150px;
-}
+
 .footer{
     background-color: #3f3e3e;
     margin: 50px 0 0 0;
@@ -211,4 +216,35 @@ header .shopping span{
     color: #274C5B;
     animation: moveToUp 1s cubic-bezier(.6,.24,.42,.94);
     transition: all .5s cubic-bezier(.52,.14,.3,.67);
+}
+
+@media only screen and (max-width: 426px) {
+    .cart-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    li{
+        display: none;
+    }
+    .navbar{
+        display: block;
+        padding: 0;
+    }
+    nav{
+        width: 100%;
+        padding: 0;
+        margin-right: 70px;
+    }
+    .logo{
+        margin-left: 70px;
+    }
+    .navbar-item{
+        margin: 0;
+    }   
+    .card{
+        width: 100%;
+        margin-left: 100px;
+    }
 }
