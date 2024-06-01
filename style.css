@@ -247,4 +247,7 @@ header .shopping span{
         width: 100%;
         margin-left: 100px;
     }
+    header{
+        justify-content: unset;
+    }
 }
